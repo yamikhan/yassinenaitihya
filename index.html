@@ -3,45 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Yassine Nait Ihya — développeur Full-Stack. Projets, compétences et contact.">
     <title>Portfolio | Full-Stack Developer</title>
+  <link rel="icon" href="./images/Logo.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Passer au contenu</a>
     <header>
-        <h1>Mon Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#projects">Projets</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container header-flex">
+            <h1 class="header-title">Yassine Nait Ihya</h1>
+            <div class="header-right">
+                <nav>
+                    <button class="navbar-toggle" aria-label="Menu" aria-expanded="false" aria-controls="main-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul id="main-menu">
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#projects">Projets</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="navbar-overlay"></div>
     </header>
-    
+    <main id="main">
+    <section class="hero">
+        <img src="./images/Logo.png" alt="Avatar" class="avatar">
+        <h2>Développeur Full-Stack</h2>
+        <p>Passionné par la création d'applications web modernes, performantes et élégantes.</p>
+        <a href="#projects" class="cta-btn">Voir mes projets</a>
+    </section>
+        <!-- Avatar modal (opens when avatar clicked) -->
+        <div id="avatar-modal" class="avatar-modal hidden" role="dialog" aria-hidden="true">
+            <button class="modal-close" aria-label="Fermer la vue agrandie">×</button>
+            <img id="avatar-modal-img" src="./images/Logo.png" alt="Avatar agrandi">
+        </div>
     <section id="about">
         <h2>À propos de moi</h2>
-        <p>Je suis un développeur full-stack passionné par la création d'applications web performantes et modernes.</p>
+        <p>
+            Je m’appelle Yassine Nait Ihya — diplômé en Développement Digital (OFPPT), spécialisé Web Full-Stack. Je crée des applications web complètes (front-end, back-end et API) en mettant l'accent sur la performance, le design et l'expérience utilisateur.
+
+            Technologies : HTML, CSS, JavaScript, React, Next.js, Node.js, Express, PHP, Laravel, Python (Flask), MySQL, MongoDB.
+
+            Ouvert aux opportunités professionnelles et collaborations pour concevoir des solutions modernes et performantes.
+        </p>
     </section>
-    
+    <section id="skills">
+        <h2>Compétences</h2>
+        <div class="skills-grid">
+            <div class="skill">
+                <div class="skill-name">JavaScript</div>
+                <div class="skill-bar"><div class="skill-level" style="width:90%"></div></div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">React / Next.js</div>
+                <div class="skill-bar"><div class="skill-level" style="width:85%"></div></div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">Node.js / Express</div>
+                <div class="skill-bar"><div class="skill-level" style="width:82%"></div></div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">PHP / Laravel</div>
+                <div class="skill-bar"><div class="skill-level" style="width:75%"></div></div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">Databases (MySQL, MongoDB)</div>
+                <div class="skill-bar"><div class="skill-level" style="width:78%"></div></div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">CSS / UI</div>
+                <div class="skill-bar"><div class="skill-level" style="width:88%"></div></div>
+            </div>
+        </div>
+    </section>
     <section id="projects">
+        <h2>Projets</h2>
+        <div id="projects-grid" class="projects-grid">
+            <!-- Project cards injected by script.js -->
+        </div>
     </section>
-    
     <section id="contact">
         <h2>Contact</h2>
-        <form>
-            <label for="name">Nom :</label>
-            <input type="text" id="name" required>
-            
-            <label for="email">Email :</label>
-            <input type="email" id="email" required>
-            
-            <label for="message">Message :</label>
-            <textarea id="message" required></textarea>
-            
-            <button type="submit">Envoyer</button>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message :</label>
+                <textarea id="message" required></textarea>
+            </div>
+            <button type="submit" class="cta-btn">Envoyer</button>
         </form>
     </section>
-    
+    </main>
     <script src="script.js"></script>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <span>© 2025 Yassine Nait Ihya. Tous droits réservés.</span>
+        <div class="footer-links">
+          <a href="mailto:naitihyayassine@gmail.com" aria-label="Email"><svg height="18" width="18" viewBox="0 0 24 24" fill="none" stroke="#f1c40f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg></a>
+          <a href="https://github.com/yamikhan" target="_blank" rel="noopener" aria-label="GitHub"><svg height="18" width="18" viewBox="0 0 24 24" fill="none" stroke="#f1c40f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.32 6.84 9.67.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.61-3.37-1.36-3.37-1.36-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1.01.07 1.54 1.06 1.54 1.06 .89 1.54 2.34 1.1 2.91.84.09-.66.35-1.1.63-1.35-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.29.1-2.68 0 0 .84-.28 2.75 1.05a9.27 9.27 0 012.5-.34c.85 0 1.7.11 2.5.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.39.2 2.42.1 2.68.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.56 5.07.36.31.68.92.68 1.85 0 1.34-.01 2.42-.01 2.75 0 .26.18.57.69.47C19.13 20.58 22 16.76 22 12.26 22 6.58 17.52 2 12 2z"/></svg></a>
+        </div>
+      </div>
+    </footer>
 </body>
 </html>
